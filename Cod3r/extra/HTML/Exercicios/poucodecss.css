@@ -1,0 +1,19 @@
+#textoPrincipal {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: blueviolet;
+    color: cornsilk;
+}
+
+.fundoVermelho.negrito {
+    font-size: 30px;
+    background-color: red;
+    font-weight: bold;
+    color: cyan;
+}
+
+.fundoVermelho {
+    font-size: 20px;
+    background-color: red;
+    color: darkgrey;
+}

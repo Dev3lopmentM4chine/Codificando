@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font: normal 15pt arial;
+            text-align: center;
+        }
+        input#confi{
+            padding: 5px;
+            background-color: green;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de multa Detran-SP</h1>
+    <h3>Verificar multa:</h3>
+    <p>Em que velocidade km/h você estava?</p>
+    Sua velocidade<input type="number" id="km">km/h
+    <input type="button" value="verificar" id="confi" onclick="verificar()">
+    <p id="resp">Sua situação:</p>
+    <script>
+        function verificar(){
+            let kmh = document.querySelector('input#km')
+            let kmh2 = Number(kmh.value)
+            let pesq = document.querySelector('p#resp')
+            if(kmh2 > 60){
+                pesq.innerHTML = `Sua situação:Vecê foi <strong>MULTADO</strong> pois estava a ${kmh2}km/h!`
+            } else{
+                pesq.innerHTML = `Sua situação: Você não tem <strong>MULTAS</strong> registradas!`
+            }
+        }
+    </script>
+</body>
+</html>

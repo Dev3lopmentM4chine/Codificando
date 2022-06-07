@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+         <title>Projeto Diretorio</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Projeto Diretorio Dump V1</h1>
+        </header>
+        <nav>
+            <a href="DiretorioDump.html" class="azul">Conteudo</a>
+        </nav>
+        <section id="conteudo"></section>
+        <footer>
+            copyright © Development Machine
+        </footer>
+        <script>
+            document.querySelectorAll('a').forEach(link => {
+                const conteudo = document.getElementById("conteudo")
+
+                link.onclick = function(e) {
+                    e.preventDefault()
+                    fetch(link.href)
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+    </body>
+</html>

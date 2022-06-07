@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            text-align: center;
+            font: normal 15pt arial;
+        }
+        input#env{
+            background-color: green;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <input type="text" id="pais">
+    <input type="button" value="verificar" id="env" onclick="act()">
+    <div id="resp1"></div>
+    <div id="resp2"></div>
+    <script>
+        var resp1 = document.querySelector('div#resp1')
+        var resp2 = document.querySelector('div#resp2')
+        function act(){
+            var inp = document.querySelector('input#pais')
+            var inp2 = inp.value
+            if(inp2 == 'Brasil'){
+                resp1.innerHTML = `Vivendo em <strong>${inp2}</strong>`
+                resp2.innerHTML = `Você é Brasileiro(a)!`
+            }else{
+                resp1.innerHTML = `Vivendo em <strong>${inp2}</strong>`
+                resp2.innerHTML = `Você é Estrangeiro(a)!`
+            }
+        }
+
+    </script>
+</body>
+</html>

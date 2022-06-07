@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Revisão</title>
+    <style>
+        #conteudo {
+            padding: 30px;
+        }
+
+        .menu {
+            font-size: 20px;
+            color: rgb(114, 112, 116);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Revisão HTML</h1>
+    </header>
+    <nav>
+        <a href="backend/HelloWord.html" class="menu">Home|</a>
+        <a href="backend/texto1.html" class="menu">texto1|</a>
+        <a href="backend/texto2.html" class="menu">texto2|</a>
+        <a href="backend/ListasOrdenadas.html" class="menu">Listas-01|</a>
+        <a href="backend/ListasnãoOrdenadas.html" class="menu">Listas-02|</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>Curso Web Cod3r.com.br</footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById("conteudo")
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+
+</html>

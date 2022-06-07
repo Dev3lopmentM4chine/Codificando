@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scle=1.0">
+    <style>
+        body {
+            background-color: rgb(30, 185, 185);
+            font: normal 15pt arial;
+            color: white;
+        }
+    </style>
+    <title>Manipuilando DOM</title>
+</head>
+
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div name="msg" id="msg" class="msg">Clique em min</div>
+    <div name="msg" id="msg" class="msg">JavaScript é muito massa!</div>
+    <script>
+        /*
+        .innerText
+        .innerHTML
+        */
+        //Selecionando por marca .getElementsByTagName()[]
+        let c1 = document.getElementsByTagName('div')[0]
+        c1.style.color = 'green'
+
+        //Selecionando por ID .getElementById()
+        let c2 = document.getElementById('msg')
+        c2.style.color = 'black'
+
+        //Selecionando por Name .getElementsByName()[]
+        let c3 = document.getElementsByName('msg')[0]
+        c3.style.color = 'red'
+
+        //Selecionando por Class .getElementsByClassName()[]
+        let c4 = document.getElementsByClassName('msg')[0]
+        c4.style.color = 'pink'
+
+        //Selecionando por Seletor
+        let c5 = document.querySelectorAll('div#msg')[1]
+        c5.style.color = 'purple'
+    </script>
+</body>
+
+</html>

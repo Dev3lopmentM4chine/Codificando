@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font: normal 15pt arial;
+            text-align: center;
+        }
+
+        input#color1 {
+            background-color: pink;
+            padding: 15px;
+        }
+
+        input#color2 {
+            background-color: yellow;
+            padding: 15px;
+        }
+
+        input#color3 {
+            background-color: red;
+            padding: 15px;
+        }
+    </style>
+    <title>Change Color v1</title>
+</head>
+
+<body>
+    <!--
+        Esse script vai exibir uma pagina com cinco botões 
+        e cada botão vai ter uma cor diferente que quando for 
+        clicada ela vai mudarPink o background da pagina.
+    -->
+    <h1 id="titulo">Hello World!</h1>
+    <div>
+        <input type="button" value="Mude a cor!" id="color1" onmouseenter="mudarPink()" onmouseout="resetcolor()">
+        <input type="button" value="Mude a cor!" id="color2" onmouseenter="mudarYellow()" onmouseout="resetcolor()">
+        <input type="button" value="Mude a cor!" id="color3" onmouseenter="mudarRed()" onmouseout="resetcolor()">
+    </div>
+    <p></p>
+    <script>
+        var corpo = document.querySelector('body')
+        var sit = document.getElementsByTagName('p')[0]
+        sit.innerHTML = '<strong>White</strong>'
+        function mudarPink() {
+            corpo.style.background = 'pink'
+            sit.innerHTML = '<strong>Rosa</strong>'
+        }
+        function mudarYellow() {
+            corpo.style.background = 'Yellow'
+            sit.innerHTML = '<strong>Yellow</strong>'
+        }
+        function mudarRed() {
+            corpo.style.background = 'Red'
+            sit.innerHTML = '<strong>Red</strong>'
+        }
+
+        function resetcolor(){
+            corpo.style.background = 'White'
+            sit.innerHTML = '<strong>White</strong>'
+        }
+    </script>
+</body>
+</html>

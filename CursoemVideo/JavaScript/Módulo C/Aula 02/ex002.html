@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+    <title>Calculadora com DOM</title>
+</head>
+<body>
+<h1>Somador</h1> 
+<input type="number" id="n1"> +
+<input type="number" id="n2">
+<input type="button" value="Somar" id="botao">
+<div id="res">Resultado</div>
+<script>
+    var botact = document.querySelector('input#botao')
+    botact.addEventListener('click', somadora)
+    
+    function somadora(){
+        var tn1 = document.querySelector('input#n1')
+        var tn2 = document.querySelector('input#n2')
+        var resp = document.querySelector('div#res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var soma = n1 + n2
+        resp.innerHTML = `O resultado da soma é <strong>${soma}</strong>`
+    }
+</script>
+</body>
+</html>

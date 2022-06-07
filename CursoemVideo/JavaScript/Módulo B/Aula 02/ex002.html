@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+    <title>JS no Cursoemvideo</title>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+    <script>
+        /*
+        Number.parseInt(n)
+        Number.parseFloat(n)
+        Number(s)
+        Serven para converter um valor para inteiro ou real!
+
+        String(n) or n.toString()
+        Converte para um valor String
+
+        n.length //retorna a quantidade de caracteres
+        n.toUpperCase() //joga tudo para 'MAIÚSCULA'
+        n.toLowerCase() //joga tudo para 'minúscula'
+        */
+
+        var n1 = Number.parseInt(prompt('Digite um número: '))
+        var n2 = Number.parseInt(prompt('Digite um número: '))
+        var soma = n1 + n2
+        alert('A soma é ' + soma) //Sem template string
+        alert(`A soma é ${soma}`) //Com template string
+    </script>
+</body>
+</html>

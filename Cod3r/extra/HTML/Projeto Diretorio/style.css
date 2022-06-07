@@ -1,0 +1,60 @@
+.logo * {
+    list-style: none;
+}
+
+.logo li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.logo ul {
+    padding-left: 25px;
+}
+
+ul.logo, .logo li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.logo, ul.logo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.logo ul {
+    margin-left: 10px;
+}
+
+ul.logo li {
+    margin: 0;
+    margin: 0 9px;
+    padding: 0 7px;
+    border-left: 1px solid rgb(100,100,100);
+}
+
+ul.logo li:last-child {
+    border-left: none;
+}
+
+ul.logo li:before {
+    position: relative;
+    top: -0.3em;
+    height: 1em;
+    width: 12px;
+    color:  white;
+    border-bottom: 1px solid rgb(100,100,100);
+    content: "";
+    display: inline-block;
+    left: -7px;
+}
+
+ul.logo li:last-child:before {
+    border-left: 1px solid rgb(100,100,100);
+}
+
+#conteudo {
+    padding: 30px;
+}
