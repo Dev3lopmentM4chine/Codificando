@@ -20,12 +20,14 @@
             <label>Sexo:</label>
             Masculino<input type="radio" name="gender" id="male" value="">
             Feminino<input type="radio" name="gender" id="female" value=""><br><br>
-            <input type="button" value="verificar" id="botao">
-        </div>
-        <div>
+            <input type="button" value="verificar" id="botao" onclick="carregar()">
+        </div><br>
+        <div id="conteudo">
             <!--imagens-->
-            <img src="" alt="">
-            Preencha os campos acima para ver o resultado!
+            <div id="mensagem">
+                Preencha os campos acima para ver o resultado!
+            </div>
+            <img id="imagem" src="" alt="">
         </div>
     </section><br>
     <footer>&copy; CursoemVideo</footer>

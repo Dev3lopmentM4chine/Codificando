@@ -17,6 +17,10 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
 }
 
+div#conteudo{
+    text-align: center;
+}
+
 footer{
     text-align: center;
     font-style: italic;

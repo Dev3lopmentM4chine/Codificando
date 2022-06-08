@@ -1,69 +1,56 @@
 let sexo1 = document.querySelector('input#male')
 let sexo2 = document.querySelector('input#female')
-let bot = document.querySelector('input#botao') 
-bot.addEventListener('click', carregar())
+let img = document.getElementById('imagem')
 
-
-function carregar(){
+function carregar() {
     let n1 = document.getElementById('num')
-    let ano = Number(n1.value) //ano digitado
-    //let idade =
-    let masculino = sexo1
-    let feminino = sexo2
-    let cont = document.querySelectorAll('div')[1]
-    console.log(ano)
-
-    /* 
-    if(masculino == true){
-        male_option()
-    }else {
-        female_option()
-    }
-    */
+    let idade = 2022 - n1.value
+    let msg = document.getElementById('mensagem')
     
 
-    /* 
-    function male_option(){
-        if(idade <= 16){
+    if (male.checked == true) {
+        male_option()
+    } else {
+        female_option()
+    }
+
+    function male_option() {
+        if (idade >= 1 && idade < 18) {
             //juventude 
-            cont.innerHTML = `Detectamos Homem com ${idade} anos.`
-            cont.img.src = `assets/imagens/jovemmale.png`
-        }else if(idade <= 25){
+            msg.innerHTML = `Detectamos Homem com ${idade} anos.`
+            img.src = 'assets/adolecente_male.png'
+        } else if (idade >= 18 && idade < 27) {
             //adolecencia
-            cont.innerHTML = `Detectamos Homem com ${idade} anos.`
-            cont.img.src = `assets/imagens/adolecentemale.png`
-        }else if(idade <= 45){
+            msg.innerHTML = `Detectamos Homem com ${idade} anos.`
+            img.src = 'assets/jovem_male.png'
+        } else if (idade >= 27 && idade < 55) {
             //adulto
-            cont.innerHTML = `Detectamos Homem com ${idade} anos.`
-            cont.img.src = `assets/imagens/adultomale.png`
-        }else{
+            msg.innerHTML = `Detectamos Homem com ${idade} anos.`
+            img.src = 'assets/adulto_male.png'
+        } else {
             //idoso
-            cont.innerHTML = `Detectamos Homem com ${idade} anos.`
-            cont.img.src = `assets/imagens/idosomale.png`
+            msg.innerHTML = `Detectamos Homem com ${idade} anos.`
+            img.src = 'assets/idoso_male.png'
         }
     }
-    */
 
-
-    /*
-    function female_option(){
-        if(idade <= 16){
+    function female_option() {
+        if (idade >= 1 && idade < 18) {
             //juventude
-            cont.innerHTML = `Detectamos Mulher com ${idade} anos.`
-            cont.img.src = `assets/imagens/jovemfamale.png`
-        }else if(idade <= 25){
+            msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
+            img.src = 'assets/adolecente_female2.png'
+        } else if (idade >= 18 && idade < 27) {
             //adolecencia
-            cont.innerHTML = `Detectamos Mulher com ${idade} anos.`
-            cont.img.src = `assets/imagens/adolecentefamale.png`
-        }else if(idade <= 45){
-            //adulto
-            cont.innerHTML = `Detectamos Mulher com ${idade} anos.`
-            cont.img.src = `assets/imagens/adultofamale.png`
-        }else{
+            msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
+            img.src = 'assets/jovem_female.png'
+        } else if (idade >= 27 && idade < 55) {
+            //adultos
+            msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
+            img.src = 'assets/adulto_female.png'
+        } else {
             //idoso
-            cont.innerHTML = `Detectamos Mulher com ${idade} anos.`
-            cont.img.src = `assets/imagens/idosofamale.png`
+            msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
+            img.src = 'assets/idoso_female.png'
         }
     }
-    */ 
 }
