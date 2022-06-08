@@ -1,20 +1,18 @@
-let sexo1 = document.querySelector('input#male')
-let sexo2 = document.querySelector('input#female')
-let img = document.getElementById('imagem')
-
 function carregar() {
+    let sexo1 = document.querySelector('input#male')
+    let sexo2 = document.querySelector('input#female')
     let n1 = document.getElementById('num')
     let idade = 2022 - n1.value
     let msg = document.getElementById('mensagem')
+    let area = document.getElementById('conteudo')
+    let img = document.getElementById('imagem')
+
+    /*
+    let img = document.createElement('img') //criando uma tag 'img' direto do js
+    img.setAttribute('id', 'imagem') //atribuindo id direto do js
+    */
     
-
-    if (male.checked == true) {
-        male_option()
-    } else {
-        female_option()
-    }
-
-    function male_option() {
+    if (male.checked) {
         if (idade >= 1 && idade < 18) {
             //juventude 
             msg.innerHTML = `Detectamos Homem com ${idade} anos.`
@@ -32,9 +30,7 @@ function carregar() {
             msg.innerHTML = `Detectamos Homem com ${idade} anos.`
             img.src = 'assets/idoso_male.png'
         }
-    }
-
-    function female_option() {
+    } else if (female.checked) {
         if (idade >= 1 && idade < 18) {
             //juventude
             msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
@@ -53,4 +49,5 @@ function carregar() {
             img.src = 'assets/idoso_female.png'
         }
     }
+    area.style.textAlign = 'center'
 }
