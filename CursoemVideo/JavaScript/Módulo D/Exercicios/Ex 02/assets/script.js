@@ -34,7 +34,7 @@ function carregar() {
         if (idade >= 1 && idade < 18) {
             //juventude
             msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
-            img.src = 'assets/adolecente_female2.png'
+            img.src = 'assets/adolecente_female.png'
         } else if (idade >= 18 && idade < 27) {
             //adolecencia
             msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
