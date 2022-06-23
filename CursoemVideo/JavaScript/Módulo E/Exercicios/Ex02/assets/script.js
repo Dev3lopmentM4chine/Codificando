@@ -1,10 +1,18 @@
-let num = document.getElementById('num')
-let botao = document.getElementById('botao')
-let resultado = document.getElementById('resul') 
-botao.addEventListener('click', carregar)
-function carregar(){
-    for(var cont = 0; cont <= 10; cont++){
-        resultado.innerHTML  = `${Number(num.value)} X ${cont} = ${Number(num.value) * cont}` 
+function tabload(){
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+    
+    if(num.value.length == 0){
+        alert('[Error]: Número invalido!')
+    }else{
+        let n  = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while(c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} X ${c} = ${n*c}`
+            tab.appendChild(item)
+            c++
+        }
     }
-    //resultado.setAttribute(cows: 14)
 }
