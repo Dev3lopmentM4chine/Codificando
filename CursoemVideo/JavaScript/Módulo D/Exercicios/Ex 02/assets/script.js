@@ -12,7 +12,7 @@ function carregar() {
     img.setAttribute('id', 'imagem') //atribuindo id direto do js
     */
     
-    if (male.checked) {
+    if (male.checked || idade != 2022) {
         if (idade >= 1 && idade < 18) {
             //juventude 
             msg.innerHTML = `Detectamos Homem com ${idade} anos.`
@@ -30,7 +30,7 @@ function carregar() {
             msg.innerHTML = `Detectamos Homem com ${idade} anos.`
             img.src = 'assets/idoso_male.png'
         }
-    } else if (female.checked) {
+    } else if (female.checked || idade != 2022) {
         if (idade >= 1 && idade < 18) {
             //juventude
             msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
@@ -48,6 +48,8 @@ function carregar() {
             msg.innerHTML = `Detectamos Mulher com ${idade} anos.`
             img.src = 'assets/idoso_female.png'
         }
+    }else{
+        alert('[Error:] Verifique os dados e tente novamente!')
     }
     area.style.textAlign = 'center'
 }
