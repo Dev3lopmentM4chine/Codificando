@@ -47,7 +47,7 @@ function validacao() {
             let opt = document.createElement('option')
             opt.text = `Número ${num} adicionado!`
             getAreaResult.appendChild(opt)
-            somaTotal = numeros.reduce((acc, numero) => acc + numero)
+            somaTotal = numeros.reduce((acc, numero) => acc + numero) //função call back
             // somaTotal += num
             mediaTotal = somaTotal/2
         }
