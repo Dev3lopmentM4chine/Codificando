@@ -31,9 +31,7 @@ let somaTotal = 0
 let mediaTotal = 0
 const numeros = []
 
-
-
-
+//Eventos
 getBtn1.addEventListener('click', validacao)
 getBtn2.addEventListener('click', finalResult)
 
