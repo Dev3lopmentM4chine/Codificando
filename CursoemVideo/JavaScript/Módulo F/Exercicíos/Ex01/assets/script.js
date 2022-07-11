@@ -38,6 +38,8 @@ getBtn2.addEventListener('click', finalResult)
 //Validação e processamento dos valores
 function validacao() {
     let num = Number(getnum.value) //conversão de tipo primitivo
+    getnum.value = ""
+    getnum.focus()
     if (num <= 0 || num > 100) {
         alert(`[Erro: Número invalido]`)
     } else {
@@ -45,11 +47,11 @@ function validacao() {
             alert(`[Erro: Número já inserido]`)
         } else {
             //Chamada pra função reset
-            resetContent(getAreaResult2)
-
+            getAreaResult2.innerHTML = ""
+            
             //Adicionando valor digitado no Array
             numeros.push(num)
-            
+
             //Indexando conteudo
             let opt = document.createElement('option')
             opt.text = `Número ${num} adicionado!`
@@ -72,19 +74,15 @@ function validacao() {
     }
 }
 
-function resetContent(c){
-    c.innerHTML = ""
-}
-
 //Relatório sobre valores adicionados
 function finalResult() {
-    if(numeros.length == 0){
-        alert('[Erro: Adcione um valor antes de Finalizar]')
-    }else{
-        getAreaResult2.innerHTML = `Ao todo temos, ${numeros.length} números cadastrados. <br><br>`
-        getAreaResult2.innerHTML += `O maior valor informado foi ${maiorNum}. <br><br>`
-        getAreaResult2.innerHTML += `O menor valor informado foi ${menorNum}. <br><br>`
-        getAreaResult2.innerHTML += `Somando todos os valores, temos ${somaTotal}. <br><br>`
-        getAreaResult2.innerHTML += `A média dos valores digitados é ${mediaTotal}. <br><br>`
+    if (numeros.length == 0) {
+        alert('[Erro: Adicione um valor antes de Finalizar]')
+    } else {
+        getAreaResult2.innerHTML = `<p>Ao todo temos, ${numeros.length} números cadastrados.</p>`
+        getAreaResult2.innerHTML += `<p>O maior valor informado foi ${maiorNum}.</p>`
+        getAreaResult2.innerHTML += `<p>O menor valor informado foi ${menorNum}.</p>`
+        getAreaResult2.innerHTML += `<p>Somando todos os valores, temos ${somaTotal}.</p>`
+        getAreaResult2.innerHTML += `<p>A média dos valores digitados é ${mediaTotal.toFixed(2)}.</p>`
     }
 }
