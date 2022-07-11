@@ -79,7 +79,7 @@ function resetContent(c){
 //Relatório sobre valores adicionados
 function finalResult() {
     if(numeros.length == 0){
-        alert('[Erro: Adcione um valor]')
+        alert('[Erro: Adcione um valor antes de Finalizar]')
     }else{
         getAreaResult2.innerHTML = `Ao todo temos, ${numeros.length} números cadastrados. <br><br>`
         getAreaResult2.innerHTML += `O maior valor informado foi ${maiorNum}. <br><br>`
